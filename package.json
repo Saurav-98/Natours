@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing Page for Natours",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saurav-98/Natours.git"
+  },
+  "author": "Saurav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saurav-98/Natours/issues"
+  },
+  "homepage": "https://github.com/Saurav-98/Natours#readme",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
