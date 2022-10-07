@@ -27,3 +27,5 @@
 7 - vendors -
 
 A - main.scss
+
+8 - Setting up Grid
