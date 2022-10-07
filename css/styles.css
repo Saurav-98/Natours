@@ -29,17 +29,14 @@ body {
   clip-path: polygon(100% 0%, 0% 0%, 0% 80vh, 100% 100%);
   position: relative;
 }
-
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
 }
-
-.logo {
+.header__logo-box .logo {
   height: 35px;
 }
-
 .header__contents {
   position: absolute;
   left: 50%;
@@ -54,7 +51,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 60px;
 }
-
 .heading__primary-main {
   display: block;
   font-size: 60px;
@@ -70,7 +66,6 @@ body {
 
   */
 }
-
 .heading__primary-sub {
   display: block;
   font-size: 20px;
@@ -117,8 +112,7 @@ body {
     transform: translateY(0);
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -128,22 +122,18 @@ body {
   color: #777;
   position: relative;
 }
-
 .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
+.btn:hover::after {
+  transform: scalex(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-2px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
-
-.btn-white:link {
-  background-color: #fff;
-  color: #777;
-}
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -156,16 +146,13 @@ body {
   transition: all 0.4s ease-in-out;
   z-index: -1;
 }
-
+.btn-white:link {
+  background-color: #fff;
+  color: #777;
+}
 .btn-white::after {
   background-color: #fff;
 }
-
-.btn:hover::after {
-  transform: scalex(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn-animated {
   animation: moveInUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
