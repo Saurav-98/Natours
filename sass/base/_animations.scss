@@ -1,0 +1,43 @@
+/* Adding Animations for the Heading Movement */
+
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    transform: translateX(30rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-6rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInUp {
+  0% {
+    transform: translateY(20rem);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -12,3 +12,18 @@
 <!-- ***********   animation-fill-mode: backwards;  ********* -->
 
 6 - Adding Sass to project using Npm
+7 - Implementing 7-in-1 Sass Architecture
+
+1 - base - - \_base.scss - \_animations.scss - \_typography.scss - \_utlities.scss
+2 - abstracts - - \_variables.scss - \_mixins.scss - \_functions.scss
+
+3 - components -
+
+4 - layout -
+
+5 - pages - - \_home.scss
+
+6 - themes -
+7 - vendors -
+
+A - main.scss

@@ -6,9 +6,55 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/* Adding Animations for the Heading Movement */
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    transform: translateX(30rem);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-6rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveInUp {
+  0% {
+    transform: translateY(20rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 3rem;
   box-sizing: border-box;
 }
 
@@ -16,46 +62,20 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  font-size: 16px;
   color: #777;
-  padding: 30px;
-}
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  background-position: top;
-  background-size: cover;
-  clip-path: polygon(100% 0%, 0% 0%, 0% 80vh, 100% 100%);
-  position: relative;
-}
-.header__logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-.header__logo-box .logo {
-  height: 35px;
-}
-.header__contents {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 .heading__primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 .heading__primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   /* adding Animation */
   animation-name: moveInLeft;
   animation-duration: 1.2s;
@@ -68,71 +88,35 @@ body {
 }
 .heading__primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17px;
+  letter-spacing: 1.7rem;
   /* adding Animation */
   animation: moveInRight 1.2s ease-in-out;
 }
 
-/* Adding Animations for the Heading Movement */
-@keyframes moveInLeft {
-  0% {
-    transform: translateX(-300px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight {
-  0% {
-    transform: translateX(300px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateX(-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInUp {
-  0% {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s ease-in-out;
   color: #777;
   position: relative;
+  font-weight: bold;
 }
 .btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:hover::after {
   transform: scalex(1.4) scaleY(1.6);
   opacity: 0;
 }
 .btn:active {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 .btn::after {
   content: "";
@@ -156,6 +140,30 @@ body {
 .btn-animated {
   animation: moveInUp 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(100% 0%, 0% 0%, 0% 80vh, 100% 100%);
+  position: relative;
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo-box .logo {
+  height: 3.5rem;
+}
+.header__contents {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
