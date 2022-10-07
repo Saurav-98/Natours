@@ -29,3 +29,16 @@
 A - main.scss
 
 8 - Setting up Grid
+
+<!-- About Section -->
+
+- Utility classes
+- background Clip
+- transform multiple propertysimultaneously
+- outline offset , outline
+- styling hover and non hover elements
+
+<!-- ***** -webkit-background-clip: text;
+  color: transparent; ****** -->
+
+For using a linear background as color for heading
