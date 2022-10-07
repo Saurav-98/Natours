@@ -42,3 +42,8 @@ A - main.scss
   color: transparent; ****** -->
 
 For using a linear background as color for heading
+
+<!--
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.9);
+  } -->
