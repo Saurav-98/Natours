@@ -1,6 +1,9 @@
 .u-center-text {
   text-align: center;
 }
+.u-margin-b-hg {
+  margin-bottom: 10rem;
+}
 .u-margin-b-bg {
   margin-bottom: 8rem;
 }
@@ -9,4 +12,23 @@ u-margin-b-md {
 }
 .u-margin-b-sm {
   margin-bottom: 1.5rem;
+}
+
+.u-margin-u-sm {
+  margin-top: 1.5rem;
+}
+.u-margin-u-md {
+  margin-top: 4rem;
+}
+.u-margin-u-bg {
+  margin-top: 8rem;
+}
+.u-margin-u-hg {
+  margin-top: 10rem;
+}
+.white-text {
+  color: $color-white;
+}
+.grey-text {
+  color: $color-grey-dark;
 }

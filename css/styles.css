@@ -129,6 +129,10 @@ body {
   text-align: center;
 }
 
+.u-margin-b-hg {
+  margin-bottom: 10rem;
+}
+
 .u-margin-b-bg {
   margin-bottom: 8rem;
 }
@@ -139,6 +143,30 @@ u-margin-b-md {
 
 .u-margin-b-sm {
   margin-bottom: 1.5rem;
+}
+
+.u-margin-u-sm {
+  margin-top: 1.5rem;
+}
+
+.u-margin-u-md {
+  margin-top: 4rem;
+}
+
+.u-margin-u-bg {
+  margin-top: 8rem;
+}
+
+.u-margin-u-hg {
+  margin-top: 10rem;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.grey-text {
+  color: #777;
 }
 
 .about {
@@ -171,9 +199,22 @@ u-margin-b-md {
   display: inline-block;
   border-radius: 100px;
   transition: all 0.2s ease-in-out;
-  color: #777;
   position: relative;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+.btn-white:link {
+  background-color: #fff;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn-green:link {
+  background-color: #55c57a;
+  color: #fff;
+}
+.btn-green::after {
+  background-color: #fff;
 }
 .btn:hover {
   transform: translateY(-0.5rem);
@@ -198,13 +239,6 @@ u-margin-b-md {
   left: 0;
   transition: all 0.4s ease-in-out;
   z-index: -1;
-}
-.btn-white:link {
-  background-color: #fff;
-  color: #777;
-}
-.btn-white::after {
-  background-color: #fff;
 }
 .btn-animated {
   animation: moveInUp 0.5s ease-out 0.75s;

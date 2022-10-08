@@ -7,10 +7,27 @@
     display: inline-block;
     border-radius: 100px;
     transition: all 0.2s ease-in-out;
-    color: $color-grey-dark;
+
     position: relative;
-    font-weight: bold;
+    font-weight: 400;
+    font-size: 1.6rem;
   }
+
+  &-white:link {
+    background-color: $color-white;
+  }
+  &-white::after {
+    background-color: $color-white;
+  }
+
+  &-green:link {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+  &-green::after {
+    background-color: $color-white;
+  }
+
   &:hover {
     transform: translateY(-0.5rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -38,13 +55,6 @@
     z-index: -1;
   }
 
-  &-white:link {
-    background-color: $color-white;
-    color: $color-grey-dark;
-  }
-  &-white::after {
-    background-color: $color-white;
-  }
   &-animated {
     animation: moveInUp 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
