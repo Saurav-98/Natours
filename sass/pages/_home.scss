@@ -1,6 +1,22 @@
 .about {
   background-color: $color-grey-light-1;
-  margin-top: -15vh;
-  height: 95vh;
-  padding-top: 25vh;
+  margin-top: -20vh;
+  padding: 30vh 0;
+}
+
+.features {
+  padding: 20rem 0;
+
+  background-image: linear-gradient(
+      to right top,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img/nat-4.jpg');
+  background-size: cover;
+  transform: skewY(5deg);
+  margin-top: -10rem;
+  & > * {
+    transform: skewY(-5deg);
+  }
 }

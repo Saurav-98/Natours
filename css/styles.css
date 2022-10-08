@@ -143,9 +143,19 @@ u-margin-b-md {
 
 .about {
   background-color: #f7f7f7;
-  margin-top: -15vh;
-  height: 95vh;
-  padding-top: 25vh;
+  margin-top: -20vh;
+  padding: 30vh 0;
+}
+
+.features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  transform: skewY(5deg);
+  margin-top: -10rem;
+}
+.features > * {
+  transform: skewY(-5deg);
 }
 
 .btn:link, .btn:visited {
@@ -253,7 +263,7 @@ u-margin-b-md {
   background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
   background-position: top;
   background-size: cover;
-  clip-path: polygon(100% 0%, 0% 0%, 0% 80vh, 100% 100%);
+  clip-path: polygon(100% 0%, 0% 0%, 0% 75vh, 100% 100%);
   position: relative;
 }
 .header__logo-box {
@@ -278,6 +288,34 @@ u-margin-b-md {
   margin: 0 auto;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.features-container {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6rem;
+}
+.features-container .features-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+}
+.features-container .features-box-icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.features-container .features-box:hover {
+  transform: translateY(-2.5rem) scale(1.08);
 }
 
 /*# sourceMappingURL=styles.css.map */
