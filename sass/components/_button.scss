@@ -11,6 +11,7 @@
     position: relative;
     font-weight: 400;
     font-size: 1.6rem;
+    // z-index: 20;
   }
 
   &-white:link {
@@ -64,6 +65,7 @@
 .btn-text {
   &:link,
   &:visited {
+    // z-index: 20;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
