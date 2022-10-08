@@ -67,3 +67,12 @@ To Learn
 - background video
 - video element
 - object-fit property
+
+<!-- Booking Section -->
+
+To Learn
+
+- How to implement Solid color gradients
+- How the General and Adjacent sibling selectors work
+- ::input-placeholder pseudo-element
+- Techniques to build custom radio buttons
