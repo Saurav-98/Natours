@@ -57,3 +57,13 @@ To Learn
 - use the backface-visibility property
 - Using Background blen modes
 - use Box-decration-break
+
+<!-- Tetimonials Section -->
+
+To Learn
+
+- Text Flow around shapes , Shape-Outside and float
+- filter
+- background video
+- video element
+- object-fit property
