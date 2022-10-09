@@ -85,3 +85,12 @@ Check Box Hack
 Custom animation timing function - (Cubic Bezier curves)
 Solid color gradients
 transform-origin
+
+<!-- CSS POP UP -->
+
+To Learn
+
+- target pseudo class
+  create boxes with equal height using display: table cell
+  Css text column
+  automatic hyphenate
