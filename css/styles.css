@@ -138,7 +138,7 @@ body {
 }
 
 .u-margin-b-md {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-b-sm {
@@ -216,7 +216,7 @@ body {
   padding: 6rem;
 }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -226,6 +226,8 @@ body {
   position: relative;
   font-weight: 400;
   font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
 }
 .btn-white:link {
   background-color: #fff;
@@ -233,7 +235,7 @@ body {
 .btn-white::after {
   background-color: #fff;
 }
-.btn-green:link {
+.btn-green, .btn-green:link {
   background-color: #55c57a;
   color: #fff;
 }
@@ -248,7 +250,7 @@ body {
   transform: scalex(1.4) scaleY(1.6);
   opacity: 0;
 }
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-0.2rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
@@ -435,6 +437,46 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
+}
+.form-radio-group {
+  width: 49%;
+  display: inline-block;
+}
+.form-radio-input {
+  display: none;
+}
+.form-radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+.form-radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #55c57a;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+}
+.form-radio-button::after {
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  display: block;
+  border-radius: 50%;
+  background-color: #55c57a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s;
+}
+.form-radio-input:checked ~ .form-radio-label .form-radio-button::after {
+  opacity: 1;
 }
 
 .header {
