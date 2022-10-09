@@ -1,0 +1,150 @@
+.nav {
+  &-check {
+    display: none;
+  }
+  &-button {
+    background-color: $color-white;
+    height: 8rem;
+    width: 8rem;
+    position: fixed;
+    top: 7rem;
+    right: 7rem;
+    border-radius: 50%;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer;
+
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+  }
+  &-background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 8rem;
+    right: 8rem;
+    background-image: radial-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    z-index: 1000;
+    transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    // transform: scale(80);
+  }
+  &-menu-container {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    transition: all 0.82s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    // background-color: red;
+  }
+
+  &-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  &-item {
+    margin: 1rem;
+  }
+  &-link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      color: $color-white;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2rem;
+
+      background-size: 220%;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        #fff 50%
+      );
+
+      transition: all 0.6s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+
+    span {
+      margin-right: 1.5rem;
+      display: inline-block;
+    }
+  }
+
+  &-check:checked ~ &-background {
+    transform: scale(80);
+  }
+
+  &-check:checked ~ &-menu-container {
+    width: 100%;
+    opacity: 1;
+  }
+
+  &-icon {
+    position: relative;
+    margin-top: 4rem;
+
+    &,
+    &::after,
+    &::before {
+      width: 3rem;
+      height: 2px;
+      background-color: #333;
+      display: inline-block;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::after {
+      top: -0.8rem;
+    }
+    &::before {
+      top: 0.8rem;
+    }
+  }
+
+  &-button:hover &-icon::before {
+    top: 1rem;
+  }
+  &-button:hover &-icon::after {
+    top: -1rem;
+  }
+
+  &-check:checked + &-button &-icon {
+    background-color: transparent;
+  }
+  &-check:checked + &-button &-icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+  &-check:checked + &-button &-icon::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+}

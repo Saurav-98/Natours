@@ -76,3 +76,12 @@ To Learn
 - How the General and Adjacent sibling selectors work
 - ::input-placeholder pseudo-element
 - Techniques to build custom radio buttons
+
+<!-- Footer Section -->
+
+To Learn -
+
+Check Box Hack
+Custom animation timing function - (Cubic Bezier curves)
+Solid color gradients
+transform-origin
