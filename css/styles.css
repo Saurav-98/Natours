@@ -134,7 +134,7 @@ body {
 }
 
 .u-margin-b-bg {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
 }
 
 .u-margin-b-md {
@@ -214,6 +214,15 @@ body {
 .book-form {
   width: 50%;
   padding: 6rem;
+}
+
+.footer {
+  padding: 10rem 0;
+  background-color: #333;
+  height: 70vh;
+  font-size: 1.4rem;
+  width: 100%;
+  color: #f7f7f7;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -668,6 +677,53 @@ body {
 .card-price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+
+.footer-logo-box {
+  width: 15rem;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  max-width: 100%;
+}
+
+.footer-navigation-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-list {
+  display: flex;
+  list-style: none;
+  column-gap: 2.5rem;
+}
+
+.footer-item {
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.footer-link {
+  text-decoration: none;
+  display: inline-block;
+  color: #f7f7f7;
+  transition: all 0.3s;
+  background-color: #333;
+  text-transform: uppercase;
+}
+.footer-link:hover, .footer-link:active {
+  color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  transform: rotate(5deg) scale(1.4);
+}
+
+.footer-navigation,
+.footer-description-box {
+  border-top: 2px solid #777;
+  padding-top: 2rem;
+  padding-inline: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
