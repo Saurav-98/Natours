@@ -1,11 +1,24 @@
 .about {
   background-color: $color-grey-light-1;
   margin-top: -15rem;
-  padding: 20rem 0 25rem;
+  padding: 20rem 3rem 25rem;
+  @include response(tab-port) {
+    height: 170vh;
+  }
+  @include response(phone) {
+    height: 140vh;
+  }
 }
 
 .features {
-  padding: 20rem 0;
+  padding: 20rem 3rem;
+
+  @include response(tab-land) {
+    padding: 15rem 3rem;
+  }
+  @include response(tab-port) {
+    padding: 10rem 10rem;
+  }
   background-image: linear-gradient(
       to right top,
       rgba($color-primary-light, 0.8),
@@ -22,8 +35,14 @@
 
 .tours {
   background-color: $color-grey-light-1;
-  padding: 20rem 0 15rem 0;
+  padding: 20rem 3rem 15rem;
   margin-top: -10rem;
+  @include response(tab-port) {
+    padding: 15rem 15rem 10rem;
+  }
+  @include response(phone) {
+    padding: 15rem 5rem 10rem;
+  }
 }
 
 .stories {

@@ -6,6 +6,27 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+/*
+0 - 600px :       Phone
+600 - 900px:      Tablet Portrait
+900 - 1200px:     Tablet landscape
+1200 - 1800px:    Our Normal Desktop Screen
+1800px + :        Big Desktop
+*/
+/*
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+
+  **** Use em for defining Media Query
+  1em = 16px
+  -----------------
+  600px = 37.5em
+  900px = 56.25em
+  1200px = 75em
+  1800px = 112.5em
+*/
 /* Adding Animations for the Heading Movement */
 @keyframes moveInLeft {
   0% {
@@ -51,11 +72,38 @@ Dark green: #28b485
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
   padding: 3rem;
   box-sizing: border-box;
+}
+@media screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
@@ -86,6 +134,18 @@ body {
 
   */
 }
+@media screen and (max-width: 56.25em) {
+  .heading__primary-main {
+    font-size: 5.5rem;
+    letter-spacing: 2.5rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .heading__primary-main {
+    font-size: 5rem;
+    letter-spacing: 2rem;
+  }
+}
 .heading__primary-sub {
   display: block;
   font-size: 2rem;
@@ -94,16 +154,28 @@ body {
   /* adding Animation */
   animation: moveInRight 1.2s ease-in-out;
 }
+@media screen and (max-width: 56.25em) {
+  .heading__primary-sub {
+    font-size: 1.7rem;
+    letter-spacing: 1.4rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .heading__primary-sub {
+    font-size: 1.4rem;
+    letter-spacing: 1rem;
+  }
+}
 
 .heading-secondary {
   font-size: 3.5rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 2px;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -111,15 +183,37 @@ body {
   transform: skewY(2deg) skewX(5deg) scale(1.1);
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 2.9rem;
+    letter-spacing: 1.6px;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+    letter-spacing: 1.4px;
+  }
+}
 
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
 }
+@media screen and (max-width: 75em) {
+  .heading-tertiary {
+    font-size: 1.4rem;
+  }
+}
 
 .paragraph {
   font-size: 1.6rem;
+}
+@media screen and (max-width: 75em) {
+  .paragraph {
+    font-size: 1.4rem;
+  }
 }
 .paragraph:not(:last-child) {
   margin-bottom: 3rem;
@@ -172,15 +266,35 @@ body {
 .about {
   background-color: #f7f7f7;
   margin-top: -15rem;
-  padding: 20rem 0 25rem;
+  padding: 20rem 3rem 25rem;
+}
+@media screen and (max-width: 56.25em) {
+  .about {
+    height: 170vh;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .about {
+    height: 140vh;
+  }
 }
 
 .features {
-  padding: 20rem 0;
+  padding: 20rem 3rem;
   background-image: linear-gradient(to right top, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
   background-size: cover;
   transform: skewY(5deg);
   margin-top: -10rem;
+}
+@media screen and (max-width: 75em) {
+  .features {
+    padding: 15rem 3rem;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .features {
+    padding: 10rem 10rem;
+  }
 }
 .features > * {
   transform: skewY(-5deg);
@@ -188,8 +302,18 @@ body {
 
 .tours {
   background-color: #f7f7f7;
-  padding: 20rem 0 15rem 0;
+  padding: 20rem 3rem 15rem;
   margin-top: -10rem;
+}
+@media screen and (max-width: 56.25em) {
+  .tours {
+    padding: 15rem 15rem 10rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .tours {
+    padding: 15rem 5rem 10rem;
+  }
 }
 
 .stories {
@@ -304,7 +428,7 @@ body {
   position: relative;
 }
 .composition__photo {
-  width: 55%;
+  max-width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   position: absolute;
   z-index: 10;
@@ -496,6 +620,17 @@ body {
   clip-path: polygon(100% 0%, 0% 0%, 0% 75vh, 100% 100%);
   position: relative;
 }
+@media screen and (max-width: 75em) {
+  .header {
+    height: 90vh;
+    clip-path: polygon(100% 0%, 0% 0%, 0% 80vh, 100% 100%);
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .header {
+    clip-path: polygon(100% 0%, 0% 0%, 0% 85vh, 100% 100%);
+  }
+}
 .header__logo-box {
   position: absolute;
   top: 4rem;
@@ -511,13 +646,32 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+@media screen and (max-width: 56.25em) {
+  .header__contents {
+    top: 50%;
+  }
+}
 
-.grid-row-1-of-2 {
+.about-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   max-width: 114rem;
   margin: 0 auto;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
+}
+@media screen and (max-width: 75em) {
+  .about-grid {
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    padding: 0 5rem;
+  }
+  .about-grid a {
+    margin-bottom: 2rem;
+  }
 }
 
 .features-container {
@@ -526,6 +680,25 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 6rem;
+}
+@media screen and (max-width: 75em) {
+  .features-container {
+    column-gap: 2rem;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .features-container {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
 }
 .features-container .features-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -554,6 +727,17 @@ body {
   gap: 6rem;
   max-width: 114rem;
   margin: 0 auto;
+}
+@media screen and (max-width: 75em) {
+  .tours__card-row {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .tours__card-row {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+  }
 }
 
 .card {
@@ -734,24 +918,44 @@ body {
   height: 8rem;
   width: 8rem;
   position: fixed;
-  top: 7rem;
-  right: 7rem;
+  top: 5rem;
+  right: 5rem;
   border-radius: 50%;
   z-index: 2000;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
 }
+@media screen and (max-width: 75em) {
+  .nav-button {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .nav-button {
+    top: 2rem;
+    right: 3rem;
+    height: 7rem;
+    width: 7rem;
+  }
+}
 .nav-background {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 8rem;
-  right: 8rem;
+  top: 6rem;
+  right: 6rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media screen and (max-width: 56.25em) {
+  .nav-background {
+    top: 2.5rem;
+    right: 3.5rem;
+  }
 }
 .nav-menu-container {
   height: 100vh;
@@ -807,11 +1011,21 @@ body {
   position: relative;
   margin-top: 4rem;
 }
+@media screen and (max-width: 56.25em) {
+  .nav-icon {
+    margin-top: 3.5rem;
+  }
+}
 .nav-icon, .nav-icon::after, .nav-icon::before {
   width: 3rem;
   height: 2px;
   background-color: #333;
   display: inline-block;
+}
+@media screen and (max-width: 75em) {
+  .nav-icon, .nav-icon::after, .nav-icon::before {
+    width: 2.7rem;
+  }
 }
 .nav-icon::after, .nav-icon::before {
   content: "";

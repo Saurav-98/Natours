@@ -5,10 +5,44 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  // Tablet Landscape Media Query
+
+  @include response(tab-land) {
+    font-size: 56.25%;
+    // 1 rem = 9px
+  }
+
+  // Tablet Portrait Media Query
+
+  @include response(tab-port) {
+    font-size: 50%;
+    // 1 rem = 8px
+  }
+
+  // Phone Media Query
+
+  @include response(phone) {
+    font-size: 43.75%;
+    // 1 rem = 7px
+  }
+
+  // Big Desktop Media Query
+
+  @include response(big-desk) {
+    font-size: 75%;
+    // 1 rem = 12px
+  }
 }
 
 body {
   padding: 3rem;
   box-sizing: border-box;
+
+  @include response(tab-port) {
+    padding: 0;
+  }
 }

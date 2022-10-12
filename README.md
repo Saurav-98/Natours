@@ -94,3 +94,45 @@ To Learn
   create boxes with equal height using display: table cell
   Css text column
   automatic hyphenate
+
+<!-- Making the Website Responsive using Power of SASS -->
+
+ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
+
+Step - 1 .
+
+Use SASS mixins to write all media queries
+Use @content and @if SASS directives
+
+----- Use em for defining Media Query
+1em = 16px
+600px = 37.5em
+900px = 56.25em
+1200px =75em
+1800px = 112.5em
+
+/------------
+DEFINE MEDIA QUERY USING MIXINS
+
+@mixin response($breakpoint) {
+@if $breakpoint == phone {
+@media screen and (max-width: 37.5em) {
+@content;
+}
+}
+USE MIXIN
+
+@include response(phone) {
+font-size: 37.5%;
+// 1 rem = 6px
+}
+
+-----------------/
+
+Step 2 - Make Html font size scalable using Rem and % calculation
+
+font-size: 62.5%; 1rem = 10px ( For Normal Desktop Screen)
+font-size: 56.25%; 1rem = 9px ( For Tablet Landscape Screen)
+font-size: 50%; 1rem = 8px ( For Tablet Portrait Screen)
+font-size: 37.5%; 1rem = 6px ( For Mobile Phone Screen)
+font-size: 75%; 1rem = 12px ( For Big Desktop Screen)

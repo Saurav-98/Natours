@@ -5,6 +5,21 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: $horizontal-gutter;
 
+  @include response(tab-land) {
+    column-gap: 2rem;
+  }
+
+  @include response(tab-port) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
+  @include response(phone) {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 4rem;
+    row-gap: 4rem;
+  }
+
   .features-box {
     background-color: rgba($color-white, 0.8);
     font-size: 1.5rem;
@@ -14,6 +29,7 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     transition: all 0.2s;
+
     &-icon {
       font-size: 6rem;
       margin-bottom: 0.5rem;
