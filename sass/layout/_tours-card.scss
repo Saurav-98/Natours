@@ -1,5 +1,6 @@
 .tours__card-row {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
   gap: $horizontal-gutter;
   max-width: $grid-width;
@@ -10,42 +11,21 @@
   }
   @include response(tab-port) {
     grid-template-columns: repeat(1, 1fr);
-    gap: 5rem;
+    row-gap: 5rem;
+    max-width: 50rem;
   }
 }
 
 .card {
-  &-title {
-    &-1 {
-      background-image: linear-gradient(
-        to right bottom,
-        $color-secondary-light,
-        $color-secondary-dark
-      );
-    }
-
-    &-2 {
-      background-image: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark
-      );
-    }
-    &-3 {
-      background-image: linear-gradient(
-        to right bottom,
-        $color-tertiary-light,
-        $color-tertiary-dark
-      );
-    }
-  }
-
   // defining Perspective
 
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
+  @include response(tab-port) {
+    height: auto;
+  }
 
   &-side {
     overflow: hidden;
@@ -63,6 +43,10 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
+    @include response(tab-port) {
+      height: auto;
+      position: relative;
+    }
     &-image {
       background-size: cover;
       background-blend-mode: lighten;
@@ -116,9 +100,18 @@
 
     &-front {
       background-color: $color-white;
+      padding-bottom: 10rem;
     }
     &-back {
       transform: rotateY(180deg);
+
+      @include response(tab-port) {
+        transform: rotateY(0deg);
+        height: 20rem;
+        clip-path: polygon(0% 15%, 0% 100%, 100% 100%, 100% 0%);
+        padding: 20rem 0 10rem;
+        margin-top: -10rem;
+      }
     }
 
     &-list {
@@ -187,6 +180,9 @@
   &-price {
     text-align: center;
     margin-bottom: 8rem;
+    @include response(tab-port) {
+      margin-bottom: 4rem;
+    }
     color: $color-white;
 
     &-only {

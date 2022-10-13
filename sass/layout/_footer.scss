@@ -11,6 +11,15 @@
 .footer-navigation-box {
   display: flex;
   justify-content: space-evenly;
+  gap: 2rem;
+  @include response(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+  @include response(phone) {
+    text-align: center;
+  }
 }
 
 .footer-list {
@@ -18,6 +27,15 @@
   list-style: none;
 
   column-gap: 2.5rem;
+  @include response(tab-land) {
+    column-gap: 1.5rem;
+  }
+  @include response(tab-port) {
+    column-gap: 3rem;
+  }
+  @include response(phone) {
+    column-gap: 1.5rem;
+  }
 }
 .footer-item {
   display: inline-block;
@@ -31,6 +49,11 @@
   background-color: #333;
   text-transform: uppercase;
 
+  @include response(phone) {
+    color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+
   &:hover,
   &:active {
     color: $color-primary;
@@ -43,5 +66,11 @@
 .footer-description-box {
   border-top: 2px solid #777;
   padding-top: 2rem;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
+  @include response(tab-port) {
+    padding-inline: 3rem;
+  }
+  @include response(phone) {
+    padding-inline: 1.5rem;
+  }
 }

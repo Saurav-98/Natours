@@ -8,17 +8,53 @@
     transition: all 0.2s;
     outline-offset: 1.5rem;
 
+    @include response(tab-port) {
+      max-width: 32%;
+      position: relative;
+    }
+    @include response(phone) {
+      max-width: 90%;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+    }
+
     &-p1 {
       left: 0;
       top: -2rem;
+      @include response(tab-port) {
+        top: 0;
+        left: 0;
+        transform: scale(1.2);
+      }
+      @include response(phone) {
+        transform: scale(1);
+      }
     }
     &-p2 {
       right: 0;
       top: 20px;
+      @include response(tab-port) {
+        top: 0;
+        left: 0;
+        transform: scale(1.3);
+        z-index: 100;
+      }
+      @include response(phone) {
+        transform: scale(1);
+      }
     }
     &-p3 {
       top: 10rem;
       left: 20%;
+      @include response(tab-port) {
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
+      }
+      @include response(phone) {
+        transform: scale(1);
+      }
     }
     &:hover {
       outline: 1.2rem solid $color-primary;

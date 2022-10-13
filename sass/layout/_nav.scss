@@ -4,6 +4,7 @@
   }
   &-button {
     background-color: $color-white;
+
     height: 8rem;
     width: 8rem;
     position: fixed;
@@ -29,6 +30,7 @@
   }
   &-background {
     height: 6rem;
+
     width: 6rem;
     border-radius: 50%;
     position: fixed;
@@ -56,6 +58,7 @@
     left: 0;
     z-index: 1500;
     opacity: 0;
+    visibility: hidden;
     transition: all 0.82s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     // background-color: red;
   }
@@ -115,6 +118,7 @@
   &-check:checked ~ &-menu-container {
     width: 100%;
     opacity: 1;
+    visibility: visible;
   }
 
   &-icon {

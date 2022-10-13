@@ -2,11 +2,9 @@
   background-color: $color-grey-light-1;
   margin-top: -15rem;
   padding: 20rem 3rem 25rem;
-  @include response(tab-port) {
-    height: 170vh;
-  }
+
   @include response(phone) {
-    height: 140vh;
+    padding: 20rem 3rem 15rem;
   }
 }
 
@@ -35,13 +33,13 @@
 
 .tours {
   background-color: $color-grey-light-1;
-  padding: 20rem 3rem 15rem;
+  padding: 20rem 3rem 10rem;
   margin-top: -10rem;
   @include response(tab-port) {
     padding: 15rem 15rem 10rem;
   }
   @include response(phone) {
-    padding: 15rem 5rem 10rem;
+    padding: 15rem 5rem 5rem;
   }
 }
 
@@ -49,6 +47,10 @@
   // background-color: $color-grey-light-1;
   padding: 20rem 0 15rem 0;
   position: relative;
+
+  @include response(tab-port) {
+    padding: 10rem 0 10rem 0;
+  }
 }
 
 .booking {
@@ -58,30 +60,53 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include response(tab-port) {
+    padding: 5rem 0;
+  }
+  @include response(phone) {
+    padding: 1rem 0;
+  }
 }
 
 .book {
   background-image: linear-gradient(
       105deg,
       rgba($color-white, 0.7) 0%,
-      white 50%,
+      white 55%,
       transparent 50%
     ),
     url('../img/nat-10.jpg');
   background-size: cover;
-  height: 50rem;
+  height: auto;
   max-width: $grid-width;
   margin: 0 auto;
   box-shadow: 0 1.5rem 5rem rgba($color-black, 0.15);
   border-radius: 3px;
 
+  @include response(tab-port) {
+    background-image: linear-gradient(
+        167deg,
+        rgba(255, 255, 255, 0.8) 80%,
+        white 100%,
+        transparent 50%
+      ),
+      url(../img/nat-10.jpg);
+
+    height: 60rem;
+  }
+
   &-form {
-    width: 50%;
+    width: 60%;
     padding: 6rem;
+
+    @include response(tab-port) {
+      width: 100%;
+    }
   }
 }
 .footer {
-  padding: 10rem 0;
+  padding: 10rem 3rem;
   background-color: #333;
   height: 70vh;
   font-size: 1.4rem;

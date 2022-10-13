@@ -10,8 +10,28 @@
   font-size: $default-fz;
   transform: skewX(-12deg);
 
+  @include response(tab-port) {
+    width: 85%;
+    transform: skewX(-6deg);
+    padding: 3rem;
+    padding-left: 6rem;
+    margin: 8rem auto;
+  }
+
+  @include response(phone) {
+    width: 90%;
+    transform: skewX(0deg);
+    margin: 5rem auto;
+  }
+
   & > * {
     transform: skewX(12deg);
+    @include response(tab-port) {
+      transform: skewX(6deg);
+    }
+    @include response(phone) {
+      transform: skewX(0deg);
+    }
   }
 
   &-shape {
@@ -28,6 +48,13 @@
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewx(12deg);
+
+    @include response(tab-port) {
+      transform: translateX(-3rem) skewx(6deg);
+    }
+    @include response(phone) {
+      transform: translateX(-3rem) skewx(0deg);
+    }
 
     img {
       width: 100%;
