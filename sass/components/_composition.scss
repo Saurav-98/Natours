@@ -1,5 +1,14 @@
 .composition {
   position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include response(phone) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
   &__photo {
     max-width: 55%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
@@ -13,10 +22,8 @@
       position: relative;
     }
     @include response(phone) {
-      max-width: 90%;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 4rem;
+      max-width: 100%;
+      margin-bottom: 8rem;
     }
 
     &-p1 {
@@ -28,7 +35,7 @@
         transform: scale(1.2);
       }
       @include response(phone) {
-        transform: scale(1);
+        transform: scale(1.8);
       }
     }
     &-p2 {
@@ -41,7 +48,7 @@
         z-index: 100;
       }
       @include response(phone) {
-        transform: scale(1);
+        transform: scale(1.8);
       }
     }
     &-p3 {
@@ -53,7 +60,7 @@
         transform: scale(1.1);
       }
       @include response(phone) {
-        transform: scale(1);
+        transform: scale(1.8);
       }
     }
     &:hover {
@@ -61,6 +68,13 @@
       transform: scale(1.08) translateY(-2rem);
       box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
       z-index: 20;
+
+      @include response(phone) {
+        outline: 1.2rem solid $color-primary;
+        transform: scale(1.8) translateY(0);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+      }
     }
   }
 

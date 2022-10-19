@@ -136,3 +136,9 @@ font-size: 56.25%; 1rem = 9px ( For Tablet Landscape Screen)
 font-size: 50%; 1rem = 8px ( For Tablet Portrait Screen)
 font-size: 37.5%; 1rem = 6px ( For Mobile Phone Screen)
 font-size: 75%; 1rem = 12px ( For Big Desktop Screen)
+
+step 3 - Use correct Images for suitabe screen sizes and resolutions
+
+- srcset attribute on image and surce elements together with density descriptors
+- use Picture element for art direction
+- write media queries in html

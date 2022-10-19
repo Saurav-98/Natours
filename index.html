@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/icon-font.css.css" />
+
 
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -81,7 +81,38 @@
           </div>
           <div class="about-image-group">
             <div class="composition">
+
+              <img 
+                  srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  src="img/nat-1-large.jpg" 
+                  alt="natours photo 1"
+                  class="composition__photo composition__photo-p1"
+              
+              />
+
+
               <img
+              srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              
+              src="img/nat-2-large.jpg" 
+              alt="natours photo 2"
+              class="composition__photo composition__photo-p2"
+              />
+
+
+              <img 
+                  srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                  src="img/nat-3-large.jpg"
+                  alt="natours photo 3"
+                  class="composition__photo composition__photo-p3"
+              
+              />
+
+
+              <!-- <img
                 src="./img/nat-1-large.jpg"
                 alt="natours photo 1"
                 class="composition__photo composition__photo-p1"
@@ -95,7 +126,7 @@
                 src="./img/nat-3-large.jpg"
                 alt="natours photo 3"
                 class="composition__photo composition__photo-p3"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -237,8 +268,23 @@
       <div class="popup" id="popup">
         <div class="popup-content">
           <div class="popup-left">
-            <img src="../img/nat-8.jpg" alt="Tour Photo" class="popup-img">
-            <img src="../img/nat-9.jpg" alt="Tour Photo" class="popup-img pic-2">
+
+
+              <picture>
+                <source 
+                srcset="img/nat-8-tab-land-1x.jpg 1x, img/nat-8-tab-land-2x.jpg 2x" media="(max-width: 75em)" >
+                <img srcset="img/nat-8-desktop-1x.jpg 1x, img/nat-8-desktop-2x.jpg 2x" src="/img/nat-8.jpg" alt="Tour Photo" class="popup-img">
+              </picture>
+            
+
+              <picture>
+                <source 
+                srcset="img/nat-9-tab-land-1x.jpg 1x, img/nat-9-tab-land-2x.jpg 2x"  media="(max-width: 75em)" >
+                <img 
+                srcset="img/nat-9-desktop-1x.jpg 1x, img/nat-9-desktop-2x.jpg 2x"
+                src="img/nat-9.jpg" alt="Tour Photo" class="popup-img pic-2">
+              </picture>
+
           </div>
           <div class="popup-right">
             <a href="#tours" class="popup-close" >&times;</a>
@@ -269,7 +315,7 @@
         <div class="story-container">
           <div class="story ">
             <figure class="story-shape">
-              <img class="story-shape-image" src="../img/nat-8.jpg" alt="person on tour">
+              <img srcset="img/nat-8-desktop-1x.jpg 2x, img/nat-8-tab-land-1x.jpg 1x" class="story-shape-image" src="/img/nat-8-desktop-1x.jpg" alt="person on tour">
               <figcaption class="story-shape-caption">Mary smith</figcaption>
             </figure>
             <div class="story-text ">
@@ -279,7 +325,7 @@
           </div>
           <div class="story">
             <figure class="story-shape">
-              <img class="story-shape-image" src="../img/nat-9.jpg" alt="person on tour">
+              <img srcset="img/nat-9-desktop-1x.jpg 2x, img/nat-9-tab-land-1x.jpg 1x" class="story-shape-image" src="../img/nat-9-desktop-1x" alt="person on tour">
               <figcaption class="story-shape-caption">Jack Wilson</figcaption>
             </figure>
             <div class="story-text">
@@ -339,7 +385,13 @@
 
       <footer id="footer" class="footer">
         <div class="footer-logo-box u-margin-b-bg">
-          <img src="./img/logo-green-2x.png" alt="full logo" class="footer-logo">
+
+          <picture class="footer-logo">
+            <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width:37.5em)">
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full logo">
+          </picture>
+
+          
         </div>
 
         <div class="footer-navigation-box">
@@ -356,7 +408,7 @@
             <p class="footer-description">Built by <a href="#" class="footer-link">  Saurav Kumar Verma  </a> &copy; Designed by <a href="#" class="footer-link"> Jonas Schmedtmann </a>.</p>
           </div>
         </div>
-      </fotter>
+      </footer>
       
     </main>
   </body>

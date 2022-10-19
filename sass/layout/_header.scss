@@ -5,11 +5,19 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url('../img/hero.jpg');
+    url('../img/hero-small.jpg');
   background-position: top;
   background-size: cover;
   clip-path: polygon(100% 0%, 0% 0%, 0% 75vh, 100% 100%);
   position: relative;
+  @media (min-resolution: 192dpi) and (min-width: 97.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right top,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      ),
+      url('../img/hero.jpg');
+  }
 
   @include response(tab-land) {
     height: 90vh;
