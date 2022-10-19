@@ -4,13 +4,18 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.9);
+
   z-index: 9999;
   padding: 10rem;
   // display: none;
   opacity: 0;
   visibility: hidden;
   transition: active 0.3s;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba($color-black, 0.4);
+
   &-modifier {
     &-heading,
     &-heading2 {

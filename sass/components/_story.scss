@@ -35,19 +35,25 @@
   }
 
   &-shape {
-    width: 15rem;
-    height: 15rem;
     background-color: orangered;
     float: left;
     position: relative;
     cursor: pointer;
+    width: 15rem;
+    height: 15rem;
 
     // change text shape
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
+
     transform: translateX(-3rem) skewx(12deg);
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+    }
 
     @include response(tab-port) {
       transform: translateX(-3rem) skewx(6deg);
