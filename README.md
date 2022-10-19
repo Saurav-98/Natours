@@ -1,144 +1,102 @@
-1 - Reset CSS, add Linear gradient on the Header and make a clip path for header container.
+# Natours
 
-2 - add logo and heading text at the center of the header container.
+Natours is a travel agency company, that provides amazing, adventurous, exciting tours into the nature to the individuals and the groups at affordable rates.
 
-3 - adding animations for the entry of the Primary heading.
+The Landing page is built using SASS and moderns CSS and animations.
 
-<!-- ***** backface-visibility: hidden; *********** -->
+#### Live Demo - https://natours-saurav.netlify.app/
 
-4 added Button and some animations
-5 - advance button animations on hover using after pseudo class
+#### Github Repo - https://github.com/Saurav-98/Natours
 
-<!-- ***********   animation-fill-mode: backwards;  ********* -->
+## Tech Stack
 
-6 - Adding Sass to project using Npm
-7 - Implementing 7-in-1 Sass Architecture
+**Client:** HTML, CSS, SASS
 
-1 - base - - \_base.scss - \_animations.scss - \_typography.scss - \_utlities.scss
-2 - abstracts - - \_variables.scss - \_mixins.scss - \_functions.scss
+## Run Locally
 
-3 - components -
+Clone the project
 
-4 - layout -
+```bash
+  git clone https://github.com/Saurav-98/Natours.git
+```
 
-5 - pages - - \_home.scss
+Go to the project directory
 
-6 - themes -
-7 - vendors -
+```bash
+  cd natours
+```
 
-A - main.scss
+Install dependencies
 
-8 - Setting up Grid
+```bash
+  npm install
+```
 
-<!-- About Section -->
+Start the server
 
-- Utility classes
-- background Clip
-- transform multiple propertysimultaneously
-- outline offset , outline
-- styling hover and non hover elements
+```bash
+  npm run start
+```
 
-<!-- ***** -webkit-background-clip: text;
-  color: transparent; ****** -->
+## Color Reference
 
-For using a linear background as color for heading
+| Color                 | Hex                                                              |
+| --------------------- | ---------------------------------------------------------------- |
+| color-primary-dark    | ![#28b485](https://via.placeholder.com/10/28b485?text=+) #28b485 |
+| color-primary         | ![#55c57a](https://via.placeholder.com/10/55c57a?text=+) #55c57a |
+| color-primary-light   | ![#7ed56f](https://via.placeholder.com/10/00b48a?text=+)#7ed56f  |
+| color-secondary-light | ![#ffb900](https://via.placeholder.com/10/ffb900?text=+)#ffb900  |
+| color-secondary-dark  | ![#ff7730](https://via.placeholder.com/10/ff7730?text=+)#ff7730  |
+| color-tertiary-light  | ![#2998ff](https://via.placeholder.com/10/2998ff?text=+)#2998ff  |
+| color-tertiary-dark   | ![#5643fa](https://via.placeholder.com/10/5643fa?text=+)#5643fa  |
+| color-grey-dark       | ![#777](https://via.placeholder.com/10/777?text=+)#777           |
+| color-grey-light-1    | ![#f7f7f7](https://via.placeholder.com/10/f7f7f7?text=+)#f7f7f7  |
+| color-grey-light-2    | ![#eee](https://via.placeholder.com/10/eee?text=+)#eee           |
 
-<!--
-  &:hover &__photo:not(:hover) {
-    transform: scale(0.9);
-  } -->
+## Lessons Learned
 
-<!-- Interactive Cards Section -->
+#Learned use of few new Css properties
+1 - backface-visibility
+2 - animation-fill-mode
+3 - outline offset , outline
+4 - background Clip
+5 - transform multiple property simultaneously
+6 - CSS conditional selectors
+7 - CSS Perspective
+8 - Background blend modes
+9 - Box-decration-break
+10 - filter
+11 - ::input-placeholder pseudo-element
 
-To Learn
+1 - CSS Animations
+2 - SASS Workflow and 7-in-1 SASS Architecture
+3 - Pseudo classes and utility classes for reusability
+4 - Using 1em = 16px for defining Media Query
+5 - build custom radio buttons, Solid gradients , automatic hyphenate
 
-- Rotating Cards,
-- use Perspective in CSS.
-- use the backface-visibility property
-- Using Background blen modes
-- use Box-decration-break
+6 - Defining SASS @mixins for media queries
+7 - made Html font size responsive using Rem and % calculation
 
-<!-- Tetimonials Section -->
+    font-size: 62.5%; 1rem = 10px ( For Normal Desktop Screen)
+    font-size: 56.25%; 1rem = 9px ( For Tablet Landscape Screen)
+    font-size: 50%; 1rem = 8px ( For Tablet Portrait Screen)
+    font-size: 37.5%; 1rem = 6px ( For Mobile Phone Screen)
+    font-size: 75%; 1rem = 12px ( For Big Desktop Screen)
 
-To Learn
+8 - Image responsiveness for Optimizing Website performance
+Density descriptions
+Art Direction
+Picture element and srcset attributes
 
-- Text Flow around shapes , Shape-Outside and float
-- filter
-- background video
-- video element
-- object-fit property
+9 - setting up the Production build SASS code using Npm
+npm run build-final
 
-<!-- Booking Section -->
+## Authors
 
-To Learn
+- [@Saurav-98](https://github.com/Saurav-98)
 
-- How to implement Solid color gradients
-- How the General and Adjacent sibling selectors work
-- ::input-placeholder pseudo-element
-- Techniques to build custom radio buttons
+# Hi, I'm Saurav! 👋
 
-<!-- Footer Section -->
+## 🚀 About Me
 
-To Learn -
-
-Check Box Hack
-Custom animation timing function - (Cubic Bezier curves)
-Solid color gradients
-transform-origin
-
-<!-- CSS POP UP -->
-
-To Learn
-
-- target pseudo class
-  create boxes with equal height using display: table cell
-  Css text column
-  automatic hyphenate
-
-<!-- Making the Website Responsive using Power of SASS -->
-
-ORDER: Base + Typography > General Layout + Grid > Page Layout > Components
-
-Step - 1 .
-
-Use SASS mixins to write all media queries
-Use @content and @if SASS directives
-
------ Use em for defining Media Query
-1em = 16px
-600px = 37.5em
-900px = 56.25em
-1200px =75em
-1800px = 112.5em
-
-/------------
-DEFINE MEDIA QUERY USING MIXINS
-
-@mixin response($breakpoint) {
-@if $breakpoint == phone {
-@media screen and (max-width: 37.5em) {
-@content;
-}
-}
-USE MIXIN
-
-@include response(phone) {
-font-size: 37.5%;
-// 1 rem = 6px
-}
-
------------------/
-
-Step 2 - Make Html font size scalable using Rem and % calculation
-
-font-size: 62.5%; 1rem = 10px ( For Normal Desktop Screen)
-font-size: 56.25%; 1rem = 9px ( For Tablet Landscape Screen)
-font-size: 50%; 1rem = 8px ( For Tablet Portrait Screen)
-font-size: 37.5%; 1rem = 6px ( For Mobile Phone Screen)
-font-size: 75%; 1rem = 12px ( For Big Desktop Screen)
-
-step 3 - Use correct Images for suitabe screen sizes and resolutions
-
-- srcset attribute on image and surce elements together with density descriptors
-- use Picture element for art direction
-- write media queries in html
+I'm a front-end developer...
