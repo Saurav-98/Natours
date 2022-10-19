@@ -9,7 +9,8 @@
   @include response(tab-land) {
     gap: 3rem;
   }
-  @include response(tab-port) {
+  // @include response(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 5rem;
     max-width: 50rem;
@@ -23,7 +24,7 @@
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
-  @include response(tab-port) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
   }
 
@@ -44,7 +45,7 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
-    @include response(tab-port) {
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
       height: auto;
       position: relative;
     }
@@ -106,7 +107,8 @@
     &-back {
       transform: rotateY(180deg);
 
-      @include response(tab-port) {
+      @media only screen and (max-width: 56.25em),
+        only screen and (hover: none) {
         transform: rotateY(0deg);
         height: 20rem;
         clip-path: polygon(0% 15%, 0% 100%, 100% 100%, 100% 0%);
@@ -181,7 +183,7 @@
   &-price {
     text-align: center;
     margin-bottom: 8rem;
-    @include response(tab-port) {
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
       margin-bottom: 4rem;
     }
     color: $color-white;
